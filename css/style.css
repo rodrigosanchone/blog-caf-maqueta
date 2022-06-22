@@ -1,0 +1,273 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,500&display=swap');
+
+:root{
+    --fuenteHeading: font-family: 'Anek Malayalam', sans-serif;
+    --fuenteP: font-family: 'Anek Malayalam', sans-serif;
+    --primario: #5d2417;
+    --secundario:#c29b61;
+    --blanco:#FFF;
+    --negro:#000;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,  *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteP);
+    font-size:  1.6rem;
+    line-height: 2;
+}
+
+/**Globales **/
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 4.8rem;
+   
+}
+
+h2{
+     font-size: 4rem;
+    
+} 
+
+h3{
+    font-size: 3.2rem;
+    
+}
+
+h4{
+    font-size: 2.8rem;
+   
+}
+
+img{
+    max-width: 100%;
+}
+
+.no-margin{
+     margin: 0;
+}
+
+.no-pading{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.margin-left{
+  margin-left: 3rem;
+}
+
+.margin-right{
+    margin-right: 3rem;
+}
+
+.margin-top{
+    margin-top: 3rem;
+}
+
+/**header*/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header .header__texto{
+    text-align: center;
+    color: var(--blanco);
+}
+
+.logo{
+    color:var(--blanco)
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+.entrada{
+    border-bottom: 1px  solid var(--secundario);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    margin-bottom: 0;
+    border: none;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align:center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+
+.form--search{
+    display: flex;
+
+}
+
+.form--search input{
+   padding: 0.5rem;
+   font-family: var(--fuenteHeading);
+}
+
+.icon--search{
+    background-color: var(--primario);
+    padding: 1.3rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.icon--search:hover{
+    background-color: var(--secundario);
+}
+
+.footer{
+    background-color: var(--secundario);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer .barra .logo{
+    color: #000
+}
+
+.footer  .navegacion__enlace{
+    color: #000
+}
+
+/**contacto**/
+
+.background{
+    background: url('../img/contacto.jpg');
+    height: 40rem;
+    background-size: cover;
+}
+
+.formulario{
+    border: solid 1px var(--secundario);
+    max-width: 120rem;
+    width: 100%;
+    padding: 3rem;
+}
+
+.formulario label{
+    margin:1rem;
+}
+
+.formulario input{
+    width: 100%;
+    margin: 1rem;
+    border: solid 1px var(--secundario);
+    outline: 0;
+}
+
+.formulario input:hover{
+    border: 1px solid var(--primario);
+}
+
+.formulario textarea{
+    width: 100%;
+    margin: 1rem;
+    min-height: 50rem;
+    border: solid 1px var(--secundario);
+    outline: 0
+}
+
+.formulario textarea:hover{
+    border: 1px solid var(--primario);
+}
+
+
+@media(min-width: 768px){
+
+    .header__texto{
+        margin-top: 15rem;
+    }
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navegacion{
+       display: flex;
+    }
+
+    .navegacion__enlace{
+        margin-right: 1rem;
+    }
+
+    .contenido__principal{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .boton{
+        display: inline-block
+    }
+
+    /**sobre nosotros**/
+
+    .sobre-nosotros{
+        display: flex;
+    }
+
+    .sobre-nosotros__imagen{
+        flex-basis: 50%;
+        margin-right: 1rem;
+    }
+
+    .sobre-nosotros__texto{
+        flex-basis:50%;
+        padding:  0 1rem;
+        margin: 0;
+    }
+}
+
